@@ -72,6 +72,18 @@ export default class AccountCreateForm extends LightningElement {
         }
     }
 
+    handleRemoveContactClick(){
+        if(this.numberOfContacts != 0){
+            this.numberOfContacts--;
+        }
+        if(this.currentContact > 1 ){
+            this.currentContact--;
+        }
+        if(this.contactRecords.length > 0){
+            this.contactRecords.pop();
+        }
+    }
+
     handleCreateClick(){
         if(this.accountName == undefined){
             this.dispatchEvent(new ShowToastEvent({title: 'Error', message: 'Account name is required to create an Account!', variant : 'error'}));
