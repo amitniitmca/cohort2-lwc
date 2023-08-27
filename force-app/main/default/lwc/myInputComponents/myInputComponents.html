@@ -1,0 +1,47 @@
+<template>
+    <lightning-card title="Input Components" icon-name="custom:custom12">
+        <div class="slds-p-horizontal_small">
+            <lightning-input type="text" 
+                            variant="label-stacked" 
+                            label="Enter first Name" 
+                            placeholder="For example: John"
+                            value={firstName}
+                            required
+                            message-when-value-missing="First name is required field!"
+                            onchange={handleFirstNameChange}>
+            </lightning-input>
+        </div>
+        <div class="slds-p-horizontal_small">
+            <lightning-input type="date" 
+                            variant="standard" 
+                            label="Date of Birth"
+                            onchange={handleDateOfBirthChange}
+                            value={dob}
+                            min={dobMin}
+                            max={dobMax}>
+            </lightning-input>
+        </div>
+        <div class="slds-p-horizontal_small">
+            <lightning-input type="datetime" 
+                            variant="standard" 
+                            label="Date of Appointment"
+                            onchange={handleDateOfAppointmentChange}>
+            </lightning-input>
+        </div>
+        <div class="slds-p-horizontal_small">
+            <lightning-input type="number" 
+                            variant="standard" 
+                            label="Salary"
+                            formatter="currency"
+                            value={salary}
+                            onchange={handleSalaryChange}>
+            </lightning-input>
+        </div>
+        <div class="slds-p-horizontal_small">
+            <lightning-button variant="neutral" 
+                            label="Show" 
+                            onclick={handleClick}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

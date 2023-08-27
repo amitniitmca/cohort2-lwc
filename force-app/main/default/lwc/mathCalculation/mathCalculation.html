@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Math Calculation" icon-name="custom:custom21">
+        <div class="slds-p-horizontal_small">
+            <lightning-input type="number" label="First Number:" onchange={handleFirstNumberChange}></lightning-input>
+            <lightning-input type="number" label="Second Number:" onchange={handleSecondNumberChange}></lightning-input>
+            <lightning-button label="+" onclick={handleAddClick}></lightning-button>
+            <p> {result} </p>
+        </div>
+    </lightning-card>
+</template>

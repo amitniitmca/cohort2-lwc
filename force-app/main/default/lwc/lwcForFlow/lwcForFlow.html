@@ -1,0 +1,38 @@
+<template>
+    <lightning-card>
+      <div>
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12">
+                <lightning-input 
+                    type="text" 
+                    label="Username"
+                    value={userName}
+                    onchange={handleUsernameChange}>
+                </lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12">
+                <lightning-input 
+                    type="email" 
+                    label="Email"
+                    value={email}
+                    onchange={handleEmailChange}>
+                </lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12">
+                <lightning-input 
+                    type="tel" 
+                    label="Phone"
+                    value={phone}
+                    onchange={handlePhoneChange}>
+                </lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" class="slds-m-top_small">
+                <lightning-button-group>
+                    <lightning-button label="Save" variant="brand" onclick={handleSaveClick}></lightning-button>
+                    <lightning-button label="Reset" variant="neutral" onclick={handleResetClick}></lightning-button>
+                </lightning-button-group>
+            </lightning-layout-item>
+        </lightning-layout>
+      </div>
+    </lightning-card>
+</template>

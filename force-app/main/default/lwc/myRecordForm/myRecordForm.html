@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="My Record Form" icon-name="custom:custom11">
+        <div class="slds-p-horizontal_small">
+            <lightning-record-form
+              object-api-name={objectApiName}
+              fields={fieldsList}>
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="My Record Edit Form" icon-name="custom:custom11">
+        <div class="slds-p-horizontal_small">
+            <lightning-record-edit-form
+              object-api-name={objectApiName}
+              record-id="0012t00000T9wqKAAR">
+                <div>
+                    <lightning-input-field field-name="Name"> </lightning-input-field>
+                    <lightning-input-field field-name="Type"> </lightning-input-field>
+                    <lightning-input-field field-name="AnnualRevenue"> </lightning-input-field>
+                </div>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="My Record View Form" icon-name="custom:custom11">
+        <div class="slds-p-horizontal_small">
+            <lightning-record-view-form
+              object-api-name={objectApiName}
+              record-id="0012t00000T9wqKAAR">
+                <div>
+                    <lightning-output-field field-name="Name"> </lightning-output-field>
+                    <lightning-output-field field-name="Type"> </lightning-output-field>
+                    <lightning-output-field field-name="AnnualRevenue"> </lightning-output-field>
+                </div>
+            </lightning-record-view-form>
+        </div>
+    </lightning-card>
+</template>
