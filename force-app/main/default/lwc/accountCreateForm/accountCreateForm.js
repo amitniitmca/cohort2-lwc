@@ -3,6 +3,8 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import getAccountTypePicklistValues from '@salesforce/apex/AccountCreateFormController.getAccountTypePicklistValues';
 import createAccount from '@salesforce/apex/AccountCreateFormController.createAccount';
 import createContacts from '@salesforce/apex/AccountCreateFormController.createContacts';
+import Cohort2Style from '@salesforce/resourceUrl/Cohort2Style';
+import { loadStyle, loadScript } from 'lightning/platformResourceLoader';
 
 export default class AccountCreateForm extends LightningElement {
     defaultTypeValue;
@@ -38,6 +40,10 @@ export default class AccountCreateForm extends LightningElement {
         if(error){
             console.log(error);
         }
+    }
+
+    connectedCallback(){
+        loadStyle(this, Cohort2Style + '/style.css');
     }
 
     handleAccountNameChange(event){
