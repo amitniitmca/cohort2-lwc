@@ -1,0 +1,20 @@
+<template>
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size="12" >
+            <lightning-combobox
+                label="Choose Flow"
+                value={flowValue}
+                options={flowOptions}
+                onchange={handleFlowChange} ></lightning-combobox>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" >
+            <template if:true={flowValue}>
+                <lightning-flow
+                  flow-api-name={flowValue}
+                  onstatuschange={handleStatusChange}
+                ></lightning-flow>
+            </template>
+        </lightning-layout-item>
+    </lightning-layout>
+
+</template>
